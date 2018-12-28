@@ -4,7 +4,8 @@
   "description": "넷마블 모바일게임 **블레이드&소울 레볼루션**에서 필드 보스의 등장 시간을 **집단지성**을 이용하여 예측하고 알려주는 보조도구.",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "lowdb": "^1.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
