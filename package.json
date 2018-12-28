@@ -1,0 +1,27 @@
+{
+  "name": "soul",
+  "version": "1.0.0",
+  "description": "넷마블 모바일게임 **블레이드&소울 레볼루션**에서 필드 보스의 등장 시간을 **집단지성**을 이용하여 예측하고 알려주는 보조도구.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3"
+  },
+  "scripts": {
+    "build": "babel src --out-dir dist --copy-files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bns1piece/soul.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bns1piece/soul/issues"
+  },
+  "homepage": "https://github.com/bns1piece/soul#readme"
+}
