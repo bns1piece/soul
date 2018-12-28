@@ -10,10 +10,15 @@
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3"
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "nodemon": "^1.18.9"
   },
   "scripts": {
-    "build": "babel src --out-dir dist --copy-files"
+    "build": "babel src --out-dir dist --copy-files",
+    "serve": "node dist/index.js",
+    "dev": "nodemon --ignore data/ src/**/* --exec 'babel-node src/index.js'",
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
