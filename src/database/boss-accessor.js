@@ -8,7 +8,7 @@ class BossAccessor extends BaseAccessor {
     }
 
     list() {
-        return this.get(['bosses']);
+        return super.get(['bosses']);
     }
 
     push(boss) {

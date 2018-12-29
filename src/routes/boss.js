@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
     return;
   }
 
-  if (bossAccessor.find(id)) {
+  if (bossAccessor.list().find(b => b.id === id)) {
     res.sendStatus(409);
     return;
   }
