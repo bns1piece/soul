@@ -1,8 +1,8 @@
 import BaseAccessor from './base-accessor';
 
-class BossAccessor extends BaseAccessor {
+class HistoryAccessor extends BaseAccessor {
   constructor() {
-      super('boss', {
+      super('history', {
           servers: {},
       });
   }
@@ -11,16 +11,14 @@ class BossAccessor extends BaseAccessor {
       return this.get(['servers', server]);
   }
 
-  push(server, world, field, channel, value) {
-      super.push([
+  update(server, boss, channel, value) {
+      super.set([
         { key: 'servers', default: {} },
         { key: server, default: {} },
-        { key: world, default: {} },
-        { key: field, default: {} },
-        { key: channel, default: [] },
-      ], value);
+        { key: boss, default: {} },
+      ], channel, value);
   }
 }
 
 
-export default new BossAccessor();
+export default new HistoryAccessor();

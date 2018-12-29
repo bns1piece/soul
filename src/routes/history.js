@@ -1,18 +1,30 @@
 import express from 'express';
 
-import bossAccessor from '../database/history-accessor';
+import serverAccessor from '../database/server-accessor';
+import historyAccessor from '../database/history-accessor';
+import bossAccessor from '../database/boss-accessor';
 
 const router = express.Router();
 
-router.get('/:world?', (req, res) => {
-  const { server, world } = req.params;
-  res.json(bossAccessor.list(server) || {});
+router.get('/servers/:server/bosses', (req, res) => {
+  const { server } = req.params;
+  res.json(historyAccessor.list(server) || {});
 });
 
-router.post('/:world/fields/:field/channels/:channel', async (req, res) => {
-  const { server, world, field, channel } = req.params;
-  const { time } = req.query;
-  await bossAccessor.push([server, world, field, channel], { 
+router.post('/servers/:server/bosses/:boss/channels/:channel', async (req, res) => {
+  const { server, boss, channel } = req.params;
+  const { time } = req.body;
+
+  if (!serverAccessor.list().find(s => s.id === server)) {
+    res.sendStatus(404);
+    return;
+  }
+
+  if (!bossAccessor.list().find(b => b.id === boss)) {
+    res.sendStatus(404);
+    return;
+  }
+  await historyAccessor.update(server, boss, channel, { 
     time 
   });
 

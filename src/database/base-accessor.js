@@ -53,4 +53,10 @@ export default class BaseAccessor {
           .push(value)
           .write();
   }
+
+  async set(path = [], key, value) {
+    await this.find([...path])
+          .set(key, value)
+          .write();
+  }
 }
