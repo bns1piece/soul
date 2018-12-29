@@ -6,8 +6,8 @@ import bossRouter from './boss';
 
 const router = express.Router();
 
-router.use('/servers/:server/worlds', bossRouter);
 router.use('/servers', serverRouter);
 router.use('/worlds', worldRouter);
+router.use('/bosses', bossRouter);
 
 export default router;

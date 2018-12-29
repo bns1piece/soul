@@ -1,6 +1,6 @@
 import express from 'express';
 
-import worldsAccessor from '../database/world-accessor';
+import mapAccessor from '../database/map-accessor';
 
 const router = express.Router();
 
@@ -21,17 +21,17 @@ router.post('/', (req, res) => {
     return;
   }
 
-  if (worldsAccessor.list().find((w => w.id === id))) {
+  if (mapAccessor.findWorld(id)) {
     res.sendStatus(409);
     return;
   }
 
-  worldsAccessor.push({ id, name, fields });
+  mapAccessor.push({ id, name, fields });
   res.sendStatus(200);
 });
 
 router.get('/', (req, res) => {
-  res.json(worldsAccessor.list() || []);
+  res.json(mapAccessor.list() || []);
 });
 
 export default router;

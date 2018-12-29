@@ -1,26 +1,19 @@
 import BaseAccessor from './base-accessor';
 
 class BossAccessor extends BaseAccessor {
-  constructor() {
-      super('boss', {
-          servers: {},
-      });
-  }
+    constructor() {
+        super('boss', {
+            bosses: [],
+        });
+    }
 
-  list(server) {
-      return this.get(['servers', server]);
-  }
+    list() {
+        return this.get(['bosses']);
+    }
 
-  push(server, world, field, channel, value) {
-      super.push([
-        { key: 'servers', default: {} },
-        { key: server, default: {} },
-        { key: world, default: {} },
-        { key: field, default: {} },
-        { key: channel, default: [] },
-      ], value);
-  }
+    push(boss) {
+        super.push(['bosses'], boss);
+    }
 }
-
 
 export default new BossAccessor();

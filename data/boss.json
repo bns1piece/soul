@@ -10,5 +10,6 @@
       }
     }
   },
-  "servers": {}
+  "servers": {},
+  "bosses": []
 }
