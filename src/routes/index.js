@@ -1,8 +1,29 @@
 import express from 'express';
 
+import serverAccessor from '../database/server-accessor';
 import bossAccessor from '../database/boss-accessor';
 
 const router = express.Router();
+
+router.post('/servers', (req, res) => {
+  const {  sid, name } = req.body;
+  if (req.get('api-key') !== 'blade8soul') {
+    res.sendStatus(401);
+    return;
+  }
+
+  if (serverAccessor.list().find((s => s.sid === sid))) {
+    res.sendStatus(409);
+    return;
+  }
+
+  serverAccessor.push({ sid, name });
+  res.sendStatus(200);
+});
+
+router.get('/servers', (req, res) => {
+  res.json(serverAccessor.list());
+});
 
 router.get('/servers/:server/fields/:field?', (req, res) => {
   const { server, field } = req.params;

@@ -7,6 +7,7 @@ const app = express();
 const { PORT = 3000 } = process.env;
 
 app.use(express.static(path.resolve(__dirname, 'public')));
+app.use(express.json());
 app.use('/api/v1', router);
 
 app.listen(PORT, () => {
