@@ -1,22 +1,6 @@
 {
   "servers": [
     {
-      "sid": "s12",
-      "name": "hello"
-    },
-    {
-      "sid": "s2",
-      "name": "s2-hello"
-    },
-    {
-      "id": "s3",
-      "name": "s3-hello"
-    },
-    {
-      "id": "s4",
-      "name": "s3-hello"
-    },
-    {
       "id": "s1",
       "name": "전광석화1"
     }
