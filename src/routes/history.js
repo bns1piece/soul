@@ -19,7 +19,7 @@ router.post('/servers/:server/bosses', async (req, res) => {
     return;
   }
 
-  await historyAccessor.update(server, world, field, channel, { 
+  await historyAccessor.updateBoss(server, world, field, channel, { 
     time 
   });
 

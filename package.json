@@ -20,7 +20,7 @@
   "scripts": {
     "build": "babel src --out-dir dist --copy-files",
     "serve": "node dist/index.js",
-    "dev": "nodemon --ignore data/ src/**/* --exec 'babel-node src/index.js'",
+    "dev": "nodemon --ignore data/ src/**/* --exec \"babel-node src/index.js\"",
     "start": "npm run dev"
   },
   "repository": {

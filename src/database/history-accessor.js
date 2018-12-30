@@ -11,13 +11,14 @@ class HistoryAccessor extends BaseAccessor {
       return this.get(['servers', server]);
   }
 
-  update(server, world, field, channel, value) {
+  updateBoss(server, world, field, channel, value) {
       super.set([
         { key: 'servers', default: {} },
         { key: server, default: {} },
         { key: world, default: {} },
         { key: field, default: {} },
-      ], channel, value);
+        { key: channel, default: {} },
+      ], 'boss', value);
   }
 }
 
