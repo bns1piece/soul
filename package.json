@@ -14,6 +14,9 @@
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/runtime": "^7.2.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0",
     "nodemon": "^1.18.9",
     "regenerator-runtime": "^0.13.1"
   },
@@ -21,7 +24,8 @@
     "build": "babel src --out-dir dist --copy-files",
     "serve": "node dist/index.js",
     "dev": "nodemon --ignore data/ src/**/* --exec \"babel-node src/index.js\"",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
