@@ -7,8 +7,8 @@ class HistoryAccessor extends BaseAccessor {
       });
   }
 
-  list(server) {
-      return this.get(['servers', server]);
+  list(server, world) {
+      return this.get(['servers', server, world]);
   }
 
   updateBoss(server, world, field, channel, value) {
