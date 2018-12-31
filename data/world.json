@@ -1,19 +1,19 @@
 {
   "worlds": [
     {
-      "id": "w1",
+      "id": "world01",
       "name": "제룡림",
       "fields": [
         {
-          "id": "f1",
-          "name": "대나무 해안"
+          "id": "field01",
+          "name": "망자의 숲",
+          "boss": {
+            "name": "천령강시",
+            "interval": 10
+          }
         },
         {
-          "id": "f2",
-          "name": "망자의 숲"
-        },
-        {
-          "id": "f3",
+          "id": "field02",
           "name": "흑음림",
           "boss": {
             "name": "모란악귀",
@@ -21,12 +21,166 @@
           }
         },
         {
-          "id": "f4",
-          "name": "기연절벽"
+          "id": "field03",
+          "name": "기연절벽",
+          "boss": {
+            "name": "강철암괴",
+            "interval": 10
+          }
         },
         {
-          "id": "f5",
-          "name": "송암도"
+          "id": "field04",
+          "name": "송암도",
+          "boss": {
+            "name": "함대장교 예희",
+            "interval": 10
+          }
+        },
+        {
+          "id": "field05",
+          "name": "송림분지",
+          "boss": {
+            "name": "휘비고",
+            "interval": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": "world02",
+      "name": "대사막",
+      "fields": [
+        {
+          "id": "field01",
+          "name": "토문진",
+          "boss": {
+            "name": "금강역사",
+            "interval": 60
+          }
+        },
+        {
+          "id": "field02",
+          "name": "열사지대",
+          "boss": {
+            "name": "귀염집게",
+            "interval": 60
+          }
+        },
+        {
+          "id": "field03",
+          "name": "사지석림",
+          "boss": {
+            "name": "흑창족 족장",
+            "interval": 60
+          }
+        },
+        {
+          "id": "field04",
+          "name": "오색암도",
+          "boss": {
+            "name": "야골타",
+            "interval": 60
+          }
+        }
+      ]
+    },
+    {
+      "id": "world03",
+      "name": "수월평원",
+      "fields": [
+        {
+          "id": "field01",
+          "name": "늑대구릉",
+          "boss": {
+            "name": "흑신시",
+            "interval": 120
+          }
+        },
+        {
+          "id": "field02",
+          "name": "돼지농장",
+          "boss": {
+            "name": "혼돈족 야만전사",
+            "interval": 120
+          }
+        },
+        {
+          "id": "field03",
+          "name": "반달호수",
+          "boss": {
+            "name": "골락군 훈련교관",
+            "interval": 120
+          }
+        },
+        {
+          "id": "field04",
+          "name": "안개숲",
+          "boss": {
+            "name": "야만적",
+            "interval": 180
+          }
+        },
+        {
+          "id": "field05",
+          "name": "귀도시",
+          "boss": {
+            "name": "음산하",
+            "interval": 120
+          }
+        }
+      ]
+    },
+    {
+      "id": "world04",
+      "name": "백청산맥",
+      "fields": [
+        {
+          "id": "field01",
+          "name": "바람평야",
+          "boss": {
+            "name": "포식자 돼랑",
+            "interval": 180
+          }
+        },
+        {
+          "id": "field02",
+          "name": "붉은 노을 분지",
+          "boss": {
+            "name": "칼날 이빨",
+            "interval": 480
+          }
+        },
+        {
+          "id": "field03",
+          "name": "자작나무 숲",
+          "boss": {
+            "name": "도끼파 두목 차차",
+            "interval": 180
+          }
+        },
+        {
+          "id": "field04",
+          "name": "사양꾼의 쉼터",
+          "boss": {
+            "name": "신돈",
+            "interval": 180
+          }
+        },
+        {
+          "id": "field05",
+          "name": "북방설원",
+          "boss": {
+            "name": "나무꾼 부족장 우타",
+            "interval": 180
+          }
+        },
+        {
+          "id": "field06",
+          "name": "바위 구릉지",
+          "boss": {
+            "name": "토끼가면족장 흑굉",
+            "interval": 180
+          }
         }
       ]
     }
