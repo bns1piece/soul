@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.16.4",
+    "express-status-monitor": "^1.2.3",
     "lowdb": "^1.0.0"
   },
   "devDependencies": {
