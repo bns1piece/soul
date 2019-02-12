@@ -43,6 +43,14 @@
             "name": "휘비고",
             "interval": 10
           }
+        },
+        {
+          "id": "field06",
+          "name": "잊혀진 계곡",
+          "boss": {
+            "name": "필드보",
+            "interval": 240
+          }
         }
       ]
     },
@@ -127,6 +135,14 @@
             "name": "음산하",
             "interval": 120
           }
+        },
+        {
+          "id": "field06",
+          "name": "원한의 폐허",
+          "boss": {
+            "name": "필드보스",
+            "interval": 240
+          }
         }
       ]
     },
@@ -147,7 +163,7 @@
           "name": "붉은 노을 분지",
           "boss": {
             "name": "칼날 이빨",
-            "interval": 480
+            "interval": 240
           }
         },
         {
